@@ -39,7 +39,7 @@ pipeline {
                 }
                 stage('nexus') {
                     steps {
-                        nexusArtifactUploader artifacts: [[artifactId: 'pom.javaparser-core', classifier: '', file: 'pom.xml', type: 'pom']], credentialsId: 'github', groupId: 'pom.com.github.javaparser', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'nexusproject', version: 'pom.3.23.1'
+                        nexusArtifactUploader artifacts: [[artifactId: 'pom.javaparser-core', classifier: '', file: 'pom.xml', type: 'xml']], credentialsId: 'nexus cr', groupId: 'pom.com.github.javaparser', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'nexusproject', version: 'pom.3.23.1'
                     }
                 }
             }
